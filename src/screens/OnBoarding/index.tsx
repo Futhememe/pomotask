@@ -13,7 +13,7 @@ import { PomotaskIcon } from '../../components/Icons';
 import { ContinueButton } from './styles';
 import { colors } from '../../utils/theme';
 
-export default function OnboardScreen() {
+export default function OnboardScreen({ navigation }: any) {
   const { translate } = useI18n();
   const readDelayValue = 4000;
 
@@ -40,8 +40,8 @@ export default function OnboardScreen() {
     setAnimationState('finish');
 
     setTimeout(() => {
-      console.log(name)
-    }, readDelayValue)
+      navigation.navigate('Home')
+    }, readDelayValue + 2000)
   }
 
   return(
