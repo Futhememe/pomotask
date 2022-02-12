@@ -14,7 +14,7 @@ import i18n from 'i18n-js';
 import AppContainer from './src/components/Containers';
 import en from './src/hooks/i18n/locales/en-US';
 import pt from './src/hooks/i18n/locales/pt-BR';
-import OnboardScreen from './src/screens/OnBoarding';
+import { AuthRoutes } from './src/routes/auth.routes';
 
 // Set the key-value pairs for the different languages you want to support.
 i18n.translations = {
@@ -43,8 +43,7 @@ export default function App() {
 
   return (
     <AppContainer>
-      {/* <MainScreen /> */}
-      <OnboardScreen />
+      <AuthRoutes />
     </AppContainer>
   );
 }
