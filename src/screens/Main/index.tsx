@@ -12,6 +12,7 @@ import {
 import { ThemeToggle } from '../../components/Toggle';
 import { useI18n } from '../../hooks/i18n';
 import { TaskItem } from '../../components/TaskItem';
+import { AnimatedCheckbox } from '../../components/AnimatedCheckbox';
 
 export default function MainScreen() {
   const {translate} = useI18n();
@@ -25,7 +26,7 @@ export default function MainScreen() {
      >
        <VStack space={5} alignItems='center'>
           <Box w='100px' h='100px'>
-            <TaskItem isDone={true} />
+            <AnimatedCheckbox />
           </Box>
           <Box p={10} bg={useColorModeValue('red.500', 'yellow.500')}>
             <Text>{translate('hello')}</Text>
